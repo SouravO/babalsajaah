@@ -9,8 +9,8 @@ export default function Navbar() {
         </Link>
         <div className="hidden md:flex gap-gutter items-center">
           <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="/catalog">Catalog</Link>
-          <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="#">Brands</Link>
-          <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="#">About Us</Link>
+          <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="/#brands">Brands</Link>
+          <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="/about">About Us</Link>
           <Link className="font-body-md text-body-md text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="/contact">Contact</Link>
         </div>
         <div className="flex items-center gap-gutter">
