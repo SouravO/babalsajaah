@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bab Al Sajaah - Ceramic Brake Pads</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1a1c1e",
+                        "on-primary-container": "#838486",
+                        "on-tertiary-fixed": "#181c20",
+                        "primary": "#000101",
+                        "background": "#f9f9fa",
+                        "secondary-fixed": "#ffdad6",
+                        "inverse-surface": "#2f3132",
+                        "on-secondary-fixed": "#410003",
+                        "tertiary": "#000001",
+                        "on-primary-fixed-variant": "#454749",
+                        "tertiary-container": "#191c20",
+                        "surface-container": "#eeeeef",
+                        "on-secondary-container": "#fffbff",
+                        "secondary": "#bb0016",
+                        "surface-container-high": "#e8e8e9",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9fa",
+                        "on-surface-variant": "#44474a",
+                        "surface-variant": "#e2e2e3",
+                        "surface": "#f9f9fa",
+                        "surface-dim": "#dadadb",
+                        "surface-container-highest": "#e2e2e3",
+                        "outline-variant": "#c5c6ca",
+                        "secondary-container": "#e32228",
+                        "tertiary-fixed-dim": "#c4c6cc",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1d",
+                        "on-primary-fixed": "#1a1c1e",
+                        "tertiary-fixed": "#e0e2e8",
+                        "on-tertiary-container": "#818489",
+                        "on-tertiary-fixed-variant": "#44474b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c6c6c9",
+                        "inverse-on-surface": "#f1f1f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#93000e",
+                        "on-surface": "#1a1c1d",
+                        "primary-fixed": "#e2e2e5",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "outline": "#75777a",
+                        "surface-tint": "#5d5e61"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "stack-md": "12px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container font-body-md text-body-md w-full h-20 border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-desktop max-w-container-max mx-auto hidden md:flex">
+<div class="font-headline-md text-headline-md text-on-primary dark:text-inverse-primary uppercase tracking-tighter">Bab Al Sajaah</div>
+<nav class="flex gap-gutter">
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary scale-95 duration-75" href="#">Catalog</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="#">Brands</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="#">About Us</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-gutter">
+<div class="flex gap-stack-sm">
+<button class="hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors scale-95 duration-75">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+<button class="bg-secondary text-on-secondary px-stack-lg py-stack-sm font-label-caps text-label-caps border border-secondary hover:bg-secondary-container transition-colors">Add to Quote</button>
+</div>
+</header>
+<div class="flex flex-1 max-w-container-max mx-auto w-full">
+<!-- SideNavBar (Mobile hidden) -->
+<aside class="bg-surface-container dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-caps text-label-caps h-full w-64 fixed left-0 top-0 border-r border-outline dark:border-outline-variant flat no shadows flex flex-col py-stack-lg hidden md:flex z-50">
+<div class="px-gutter mb-stack-lg">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-on-primary-container mb-stack-sm">Bab Al Sajaah</div>
+<div class="text-on-surface-variant dark:text-on-tertiary-container font-label-technical text-label-technical">Precision Spare Parts</div>
+</div>
+<nav class="flex flex-col flex-1">
+<a class="flex items-center gap-stack-md px-gutter py-stack-md text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+                </a>
+<a class="flex items-center gap-stack-md px-gutter py-stack-md bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container rounded-none border-l-4 border-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span> Catalog
+                </a>
+<a class="flex items-center gap-stack-md px-gutter py-stack-md text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span> Compatibility
+                </a>
+<a class="flex items-center gap-stack-md px-gutter py-stack-md text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span> My Quotes
+                </a>
+<a class="flex items-center gap-stack-md px-gutter py-stack-md text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span> Support
+                </a>
+</nav>
+<div class="px-gutter mt-auto">
+<button class="w-full bg-secondary text-on-secondary py-stack-sm font-label-caps text-label-caps border border-secondary hover:bg-secondary-container transition-colors">Part Search</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop md:ml-64 w-full">
+<!-- Breadcrumb -->
+<div class="mb-stack-lg text-on-surface-variant font-label-technical text-label-technical flex items-center gap-stack-sm">
+<a class="hover:text-secondary" href="#">Catalog</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-secondary" href="#">Braking System</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface">Pro-Stop Ceramic Brake Pads</span>
+</div>
+<!-- Product Header Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-stack-lg">
+<!-- Image Gallery -->
+<div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant p-stack-sm">
+<div class="aspect-video w-full relative bg-surface-container mb-stack-sm">
+<img class="w-full h-full object-cover border border-outline-variant" data-alt="A high-resolution, industrial-style product photograph of premium ceramic brake pads. The brake pads are positioned against a sterile, light gray studio background. Professional, hard studio lighting highlights the textured friction material and the metallic silver backing plates. The composition is precise, conveying a sense of automotive engineering excellence and heavy-duty reliability. Deep charcoal shadows ground the objects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCFr9zFLe5BDYQVscv3xYdGH0YnPoBEXVJ4JTwaZf5vKymTQ2Ymbg_u64C9Gq_1yhn5lNl3x7sSqmaZFO5SvUQujb4ENRetcKI_WylYGYQJsYgsHidIMymsYeDIMF0zY75iW8ZGR9jNFkhc0_4RxpUshA1G6sEGkazEcMqlb2-eZbzePA4xTQDxuqyUoMhuqwGfd7qYTmQt7S2nkCDwvFgAqL3rdY9lVZ4w3z4eC5Op_Rdr4E3d8rH"/>
+<div class="absolute top-stack-sm right-stack-sm bg-surface-container-lowest border border-outline-variant px-stack-sm py-1 flex items-center gap-stack-sm">
+<span class="text-[#008000] font-label-caps text-label-caps">In Stock</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-stack-sm">
+<div class="aspect-square bg-surface-container border border-secondary">
+<img class="w-full h-full object-cover" data-alt="Close-up detail shot of the ceramic friction material on an automotive brake pad, highlighting the gritty texture and chamfered edges. Hard industrial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsUQoomWaMvSp14n4CdUJqv_Lz78y1sJ6PNDs0kX5r9okJEmGUMYXeABRyFIn6pZqWuCgYY_HWlXhAI_ljqxv1pgWufKz8xDRTC8aNN8pzPsXF_ZgRiAQ6J_rJmlB-xNKbcZl7lbEByRpMgPtyO9xITIBz7LWKZHRVQGKL4EsCu66WTx7zJomgGHA6z9umnoOWY8bOMWCoQp1NqeZTxcBHWHTK5-QWTTm9fubFNXjbxsynZn5zTVlk"/>
+</div>
+<div class="aspect-square bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Detail view of the metallic backing plate of a ceramic brake pad, showing precise manufacturing stamps and mounting hardware. Stark white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-yrEtM8lPQnozPIB4f3aeXzqslay4L7yFyheyfIbw_RFi-c5aJvaAvXH7gIaqzWG_Jz3BpyXdsP3V2mCvo5PyJ1VW6SXBCTaXB_xTkV5eT0_yd-LkgBe8VKCZpjJAbw_eVvpU4LrpcO7FTIN_iyc0Z3ZWntu3IPAD6veL1YzkV46G3jjO1_P37OjZqtXDp9v0h8w9UgNcL1W8H9E_8xXPXNHQhWFIEE0qJdmLGNdL8Qt0o417XeB3"/>
+</div>
+<div class="aspect-square bg-surface-container border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Packaging view of premium ceramic brake pads. A sturdy, heavy-duty cardboard box with industrial branding sitting next to the brake pads." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI9H8wOk9mFQcf39s01vU8o7xMp4IaeXjYoMZsJwLVUy-yLzsQiD1--VcYOZWhB17jwafA3BT1W4kzBupcv06xHw83qtjvo_W-Nz8mdxZ7JOT9Uqzsy-AJ3fHgPB8bdJVEw8H_HFyNmNXezkpFV6nsZctRytnAke02LwkxYQdz_vI-2P7EWtMPYG0oT_Yp8LSLq2lWxk6mQvuQE8_ABUOPN4_xbP7-hSx1PvXnSMpSgplPQckOScK7"/>
+</div>
+<div class="aspect-square bg-surface-container border border-outline-variant flex items-center justify-center cursor-pointer hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-outline" style="font-size: 2rem;">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Product Info & Actions -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-stack-lg border-b border-outline-variant pb-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-stack-sm">Pro-Stop Ceramic Brake Pads</h1>
+<p class="font-label-technical text-label-technical text-on-surface-variant mb-stack-md">SKU: BRK-CER-992-A</p>
+<p class="font-body-lg text-body-lg text-on-surface">High-performance ceramic compound engineered for minimal dust, low noise, and superior stopping power under extreme thermal loads. Ideal for heavy-duty and performance applications.</p>
+</div>
+<!-- Technical Highlights Grid -->
+<div class="grid grid-cols-2 gap-stack-sm mb-stack-lg">
+<div class="bg-surface-container p-stack-md border border-outline-variant">
+<span class="material-symbols-outlined text-outline mb-stack-sm block">thermostat</span>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Thermal Rating</div>
+<div class="font-label-technical text-label-technical text-primary">650°C Max</div>
+</div>
+<div class="bg-surface-container p-stack-md border border-outline-variant">
+<span class="material-symbols-outlined text-outline mb-stack-sm block">speed</span>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Friction Coeff.</div>
+<div class="font-label-technical text-label-technical text-primary">0.42 μ</div>
+</div>
+<div class="bg-surface-container p-stack-md border border-outline-variant">
+<span class="material-symbols-outlined text-outline mb-stack-sm block">noise_control_off</span>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Noise Level</div>
+<div class="font-label-technical text-label-technical text-primary">Ultra-Low</div>
+</div>
+<div class="bg-surface-container p-stack-md border border-outline-variant">
+<span class="material-symbols-outlined text-outline mb-stack-sm block">weight</span>
+<div class="font-label-caps text-label-caps text-on-surface-variant">Weight</div>
+<div class="font-label-technical text-label-technical text-primary">1.8 kg / Set</div>
+</div>
+</div>
+<!-- Request Quote Form Area -->
+<div class="bg-surface-container-lowest p-stack-lg border border-outline-variant mt-auto">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Request Quote</h2>
+<form class="flex flex-col gap-stack-md">
+<div class="grid grid-cols-2 gap-stack-sm">
+<div>
+<label class="font-label-caps text-label-caps text-on-surface block mb-stack-sm">Quantity (Sets)</label>
+<input class="w-full bg-surface-container-lowest border border-primary p-stack-sm font-label-technical text-label-technical text-primary focus:border-secondary focus:ring-0 shadow-inner" type="number" value="1"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps text-on-surface block mb-stack-sm">Required By</label>
+<input class="w-full bg-surface-container-lowest border border-primary p-stack-sm font-label-technical text-label-technical text-primary focus:border-secondary focus:ring-0 shadow-inner" type="date"/>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-stack-md font-label-caps text-label-caps border border-secondary hover:bg-secondary-container transition-colors flex items-center justify-center gap-stack-sm mt-stack-sm" type="button">
+<span class="material-symbols-outlined">add_shopping_cart</span> Add to Quote
+                            </button>
+</form>
+</div>
+</div>
+</div>
+<!-- Specs & Compatibility Tabs -->
+<div class="mt-stack-lg pt-stack-lg border-t-2 border-outline-variant">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Technical Specifications Table -->
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-stack-md flex items-center gap-stack-sm border-b border-primary pb-stack-sm">
+<span class="material-symbols-outlined">handyman</span> Technical Specifications
+                        </h3>
+<div class="border border-outline-variant">
+<table class="w-full text-left font-label-technical text-label-technical">
+<tbody class="divide-y divide-outline-variant">
+<tr class="bg-surface-container-lowest">
+<th class="p-stack-sm text-on-surface-variant font-medium w-1/3 border-r border-outline-variant">Material Compound</th>
+<td class="p-stack-sm text-primary">Advanced Ceramic Blend (Non-Asbestos)</td>
+</tr>
+<tr class="bg-surface-container">
+<th class="p-stack-sm text-on-surface-variant font-medium w-1/3 border-r border-outline-variant">Dimensions (L x W x T)</th>
+<td class="p-stack-sm text-primary">155.2mm x 64.5mm x 18.5mm</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<th class="p-stack-sm text-on-surface-variant font-medium w-1/3 border-r border-outline-variant">Position</th>
+<td class="p-stack-sm text-primary">Front Axle</td>
+</tr>
+<tr class="bg-surface-container">
+<th class="p-stack-sm text-on-surface-variant font-medium w-1/3 border-r border-outline-variant">Wear Indicator</th>
+<td class="p-stack-sm text-primary">Included (Acoustic)</td>
+</tr>
+<tr class="bg-surface-container-lowest">
+<th class="p-stack-sm text-on-surface-variant font-medium w-1/3 border-r border-outline-variant">Hardware Included</th>
+<td class="p-stack-sm text-primary">Shims, Abutment Clips</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Vehicle Compatibility -->
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-stack-md flex items-center gap-stack-sm border-b border-primary pb-stack-sm">
+<span class="material-symbols-outlined">directions_car</span> Vehicle Compatibility
+                        </h3>
+<div class="border border-outline-variant bg-surface-container-lowest h-64 overflow-y-auto">
+<table class="w-full text-left font-label-technical text-label-technical">
+<thead class="bg-primary text-on-primary font-label-caps text-label-caps sticky top-0">
+<tr>
+<th class="p-stack-sm">Make</th>
+<th class="p-stack-sm">Model</th>
+<th class="p-stack-sm">Year</th>
+<th class="p-stack-sm">Engine</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container cursor-default">
+<td class="p-stack-sm">Toyota</td>
+<td class="p-stack-sm">Land Cruiser</td>
+<td class="p-stack-sm">2018-2023</td>
+<td class="p-stack-sm">5.7L V8</td>
+</tr>
+<tr class="hover:bg-surface-container cursor-default bg-surface-container">
+<td class="p-stack-sm">Lexus</td>
+<td class="p-stack-sm">LX570</td>
+<td class="p-stack-sm">2018-2023</td>
+<td class="p-stack-sm">5.7L V8</td>
+</tr>
+<tr class="hover:bg-surface-container cursor-default">
+<td class="p-stack-sm">Nissan</td>
+<td class="p-stack-sm">Patrol</td>
+<td class="p-stack-sm">2020-2023</td>
+<td class="p-stack-sm">5.6L V8</td>
+</tr>
+<tr class="hover:bg-surface-container cursor-default bg-surface-container">
+<td class="p-stack-sm">Toyota</td>
+<td class="p-stack-sm">Sequoia</td>
+<td class="p-stack-sm">2019-2022</td>
+<td class="p-stack-sm">5.7L V8</td>
+</tr>
+<tr class="hover:bg-surface-container cursor-default">
+<td class="p-stack-sm">Toyota</td>
+<td class="p-stack-sm">Tundra</td>
+<td class="p-stack-sm">2019-2021</td>
+<td class="p-stack-sm">5.7L V8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Parts Section -->
+<div class="mt-stack-lg pt-stack-lg border-t-2 border-outline-variant mb-margin-desktop">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Frequently Bought Together</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Related Product Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant flex flex-col group hover:border-secondary transition-colors">
+<div class="aspect-video bg-surface-container border-b border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, well-lit studio shot of a slotted automotive brake rotor. Metallic silver finish with precise machining marks visible. Industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcEkCgXDvMDBA6sINajrsPgPl-k4IIsHK1tR1M1UjWici0mFgog2EnRnDlV39v8iT2ar2MLHume3vyRQyOTbr6xUkYVAAiewmX-iyf4Jo27ChCCo_ygQL4gcvEiaCGxx7RqMsO-hH3fnMjCBYLD9ElGO8HoiDwYViKkQ6uglA4ZXoV7jRkdT2rSPq7oQds7QlfnQH7siW2IX092UPsbrQLeUUxN_22UKjj--yTlW8glLKwwhfbjlL5"/>
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-primary mb-stack-sm group-hover:text-secondary transition-colors">Slotted Brake Rotor</h4>
+<div class="font-label-technical text-label-technical text-on-surface-variant mb-stack-md">SKU: ROT-SLT-455</div>
+<div class="mt-auto grid grid-cols-2 gap-stack-sm font-label-technical text-label-technical border-t border-outline-variant pt-stack-sm">
+<div class="text-on-surface-variant">Pos:</div><div class="text-primary text-right">Front</div>
+<div class="text-on-surface-variant">Dia:</div><div class="text-primary text-right">354mm</div>
+</div>
+</div>
+</div>
+<!-- Related Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant flex flex-col group hover:border-secondary transition-colors">
+<div class="aspect-video bg-surface-container border-b border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Studio photograph of a bottle of DOT 4 synthetic brake fluid. High contrast, professional lighting emphasizing the robust packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH9JHp_Z8rre-Utel7CI72rNxMfnjyvDajgi3xAJslshpb3Epsi4IxLM4AnUS34tlb-VLAnnvJi_-VxpMQ45g9DWCst_vmAMCvNSWJQtQz3Zh9v8qaAL_niM57Ux27Flg-dAJ1x91jpQsA-PRA-v1ufLtJh9-Nlh-PUl45-fGkyTQxcG7x3LR-LvhmFGQVONzF8Cmv0gXJAdEnU_3-qHDC835PnjHF9o0NfPBoe1j_Tn5hbOIaTOF8"/>
+</div>
+<div class="p-stack-md flex flex-col flex-1">
+<h4 class="font-headline-md text-headline-md text-primary mb-stack-sm group-hover:text-secondary transition-colors">Synthetic Brake Fluid DOT 4</h4>
+<div class="font-label-technical text-label-technical text-on-surface-variant mb-stack-md">SKU: FLD-DOT4-1L</div>
+<div class="mt-auto grid grid-cols-2 gap-stack-sm font-label-technical text-label-technical border-t border-outline-variant pt-stack-sm">
+<div class="text-on-surface-variant">Vol:</div><div class="text-primary text-right">1 Liter</div>
+<div class="text-on-surface-variant">Type:</div><div class="text-primary text-right">Synthetic</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container font-label-technical text-label-technical w-full py-stack-lg border-t-2 border-outline dark:border-outline-variant flat no shadows grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto mt-auto">
+<div class="col-span-1 md:col-span-4 mb-stack-md">
+<div class="font-headline-md text-headline-md text-on-primary mb-stack-sm">Bab Al Sajaah</div>
+<p class="text-on-primary-fixed-variant">© 2024 Bab Al Sajaah Industrial. All rights reserved.</p>
+</div>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Shipping Info</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Returns</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Technical Support</a>
+</footer>
+</body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bab Al Sajaah - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1a1c1e",
+                        "on-primary-container": "#838486",
+                        "on-tertiary-fixed": "#181c20",
+                        "primary": "#000101",
+                        "background": "#f9f9fa",
+                        "secondary-fixed": "#ffdad6",
+                        "inverse-surface": "#2f3132",
+                        "on-secondary-fixed": "#410003",
+                        "tertiary": "#000001",
+                        "on-primary-fixed-variant": "#454749",
+                        "tertiary-container": "#191c20",
+                        "surface-container": "#eeeeef",
+                        "on-secondary-container": "#fffbff",
+                        "secondary": "#bb0016",
+                        "surface-container-high": "#e8e8e9",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9fa",
+                        "on-surface-variant": "#44474a",
+                        "surface-variant": "#e2e2e3",
+                        "surface": "#f9f9fa",
+                        "surface-dim": "#dadadb",
+                        "surface-container-highest": "#e2e2e3",
+                        "outline-variant": "#c5c6ca",
+                        "secondary-container": "#e32228",
+                        "tertiary-fixed-dim": "#c4c6cc",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1d",
+                        "on-primary-fixed": "#1a1c1e",
+                        "tertiary-fixed": "#e0e2e8",
+                        "on-tertiary-container": "#818489",
+                        "on-tertiary-fixed-variant": "#44474b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c6c6c9",
+                        "inverse-on-surface": "#f1f1f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#93000e",
+                        "on-surface": "#1a1c1d",
+                        "primary-fixed": "#e2e2e5",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "outline": "#75777a",
+                        "surface-tint": "#5d5e61"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "stack-md": "12px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .tech-font { font-family: 'JetBrains Mono', monospace; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-fill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container font-body-md text-body-md w-full h-20 border-b border-outline dark:border-outline-variant flat no shadows flex justify-between items-center px-margin-desktop max-w-container-max mx-auto shrink-0 z-50 sticky top-0">
+<div class="flex items-center gap-stack-lg">
+<span class="font-headline-md text-headline-md text-on-primary dark:text-inverse-primary uppercase tracking-tighter">Bab Al Sajaah</span>
+<nav class="hidden md:flex gap-stack-md">
+<a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary pb-1" href="#">Catalog</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors pb-1" href="#">Brands</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors pb-1" href="#">About Us</a>
+<a class="text-on-primary dark:text-on-primary-container hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors pb-1" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="relative hidden md:block">
+<input class="bg-surface-container text-on-surface border border-outline px-4 py-2 w-64 focus:border-secondary focus:ring-0 rounded-none tech-font text-label-technical" placeholder="Search parts, SKUs..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant cursor-pointer">search</span>
+</div>
+<div class="flex items-center gap-stack-sm text-on-primary">
+<button class="p-2 hover:text-secondary transition-colors"><span class="material-symbols-outlined">shopping_cart</span></button>
+<button class="p-2 hover:text-secondary transition-colors"><span class="material-symbols-outlined">person</span></button>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 font-label-caps text-label-caps uppercase hover:bg-secondary-container transition-colors scale-95 duration-75">
+                Add to Quote
+            </button>
+</div>
+</header>
+<div class="flex-grow flex w-full max-w-container-max mx-auto">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-80px)] w-64 sticky top-20 bg-surface-container dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-caps text-label-caps border-r border-outline dark:border-outline-variant flat no shadows py-stack-lg shrink-0 overflow-y-auto">
+<div class="px-gutter mb-stack-lg">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-on-primary-container mb-1 tracking-tighter">Bab Al Sajaah</div>
+<div class="text-on-surface-variant dark:text-on-tertiary-container tech-font text-label-technical">Precision Spare Parts</div>
+</div>
+<nav class="flex flex-col gap-1 w-full flex-grow">
+<a class="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="uppercase tracking-widest">Home</span>
+</a>
+<a class="flex items-center gap-3 px-gutter py-3 bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container rounded-none border-l-4 border-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined icon-fill">settings_input_component</span>
+<span class="uppercase tracking-widest">Catalog</span>
+</a>
+<a class="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined">directions_car</span>
+<span class="uppercase tracking-widest">Compatibility</span>
+</a>
+<a class="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="uppercase tracking-widest">My Quotes</span>
+</a>
+<a class="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="uppercase tracking-widest">Support</span>
+</a>
+</nav>
+<div class="px-gutter mt-auto pt-stack-lg border-t border-outline">
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-stack-md tracking-widest">Filters</h3>
+<div class="space-y-stack-md mb-stack-lg">
+<details class="group" open="">
+<summary class="flex justify-between items-center cursor-pointer font-body-md text-body-md font-bold text-primary mb-2">
+                            Category
+                            <span class="material-symbols-outlined group-open:-rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-2 pl-2 tech-font text-label-technical">
+<label class="flex items-center gap-2 cursor-pointer"><input checked="" class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Engine</label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Transmission</label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Braking</label>
+</div>
+</details>
+<details class="group" open="">
+<summary class="flex justify-between items-center cursor-pointer font-body-md text-body-md font-bold text-primary mb-2">
+                            Brand
+                            <span class="material-symbols-outlined group-open:-rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-2 pl-2 tech-font text-label-technical">
+<label class="flex items-center gap-2 cursor-pointer"><input class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Bosch</label>
+<label class="flex items-center gap-2 cursor-pointer"><input checked="" class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Denso</label>
+<label class="flex items-center gap-2 cursor-pointer"><input class="text-secondary border-outline focus:ring-secondary rounded-none bg-surface" type="checkbox"/> Mahle</label>
+</div>
+</details>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 font-label-caps text-label-caps uppercase hover:bg-tertiary transition-colors border border-primary flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">search</span>
+                    Part Search
+                </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow p-gutter md:p-margin-desktop bg-surface-bright">
+<div class="flex justify-between items-end mb-stack-lg border-b-2 border-primary pb-stack-sm">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tighter uppercase">Product Catalog</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Displaying 142 Engine Components</p>
+</div>
+<div class="flex gap-2 text-on-surface-variant">
+<button class="p-2 border border-outline hover:border-primary hover:text-primary transition-colors bg-surface-lowest"><span class="material-symbols-outlined">grid_view</span></button>
+<button class="p-2 border border-outline hover:border-primary hover:text-primary transition-colors bg-surface-container"><span class="material-symbols-outlined">view_list</span></button>
+</div>
+</div>
+<!-- Bento Grid / Catalog Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-[#8E9196] hover:border-secondary hover:border-2 transition-all group flex flex-col">
+<div class="h-48 relative border-b border-outline overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="A high-quality, perfectly lit studio photograph of a polished metal engine piston assembly on a pristine white background. Industrial, mechanical aesthetic. Sharp focus, deep contrasts, neutral color palette with metallic sheen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuVyIM1dc8QpyMDmlpxntM_DkI76nqIPwdErvsd_QXZ26CRW4bQ-iRtbT11C-Fb-h2W8ZTjzJ8OpYerZnpHJJt8_GmR0V2QlnT2LonxKzv2xZfvMod4F05fWL-hP6ZD2bYI1NwLpCahSR06QYIuysupg75M0aTTXNjsQc9gPkszmU8piM8sjGzq3AyEYzgJmPQWI4nbZW4leKk2ez5zYxqMCjl48pek8pDf8YcZSgcf4j45bRP5bdn"/>
+<div class="absolute top-2 left-2 bg-surface-lowest border border-outline px-2 py-1 font-label-caps text-label-caps text-primary uppercase flex items-center gap-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> In Stock
+                        </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-1 uppercase tracking-tight">Forged Piston Kit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">High-compression assembly for severe duty applications.</p>
+<div class="mt-auto grid grid-cols-2 gap-px bg-outline border border-outline tech-font text-label-technical mb-stack-lg">
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">SKU</span>
+<span class="text-primary font-bold">PT-8942-F</span>
+</div>
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Weight</span>
+<span class="text-primary font-bold">1.2 kg</span>
+</div>
+<div class="bg-surface-container-lowest p-2 col-span-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Compatibility</span>
+<span class="text-primary truncate block">V8 Industrial Series 4.0L+</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto border-t border-outline pt-stack-md">
+<span class="font-headline-md text-headline-md text-primary">$345.00</span>
+<button class="bg-secondary text-on-secondary px-4 py-2 font-label-caps text-label-caps uppercase hover:bg-secondary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span> Quote
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-[#8E9196] hover:border-secondary hover:border-2 transition-all group flex flex-col">
+<div class="h-48 relative border-b border-outline overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="A high-contrast macro studio photograph of an industrial fuel injector nozzle. The part is metallic and dark grey, resting on a flat neutral background. Lighting is harsh and precise, highlighting the machined details and structural robustness of the part." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlAkr2-d8IAzI_quDV6aF-pxwLbjSV9Qdg0q5Z56ILmc9pd0yzkJj9Ypxbp3JPI0-u_cuhGy9_95HmxO7g8XaFk7us4VxvO2Ap_no2JPgzgSs-vDoyRIzgQeWnGOphQYnVAKiorncinaXa3mOt1-0t3QVjITzmBt9G8nezCz5WI2kC0E1S7lPxaZmAX6y9EhIXblO-AGX6RQ46G1ZEeqXlsZHivMMZtKIO1VeIhIUMA0_H_JNuyxwp"/>
+<div class="absolute top-2 left-2 bg-surface-lowest border border-orange-500 border-dashed px-2 py-1 font-label-caps text-label-caps text-orange-600 uppercase flex items-center gap-1 bg-white">
+                            Backorder
+                        </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-1 uppercase tracking-tight">Fuel Injector Nozzle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Direct injection multi-port valve mechanism.</p>
+<div class="mt-auto grid grid-cols-2 gap-px bg-outline border border-outline tech-font text-label-technical mb-stack-lg">
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">SKU</span>
+<span class="text-primary font-bold">FI-2210-X</span>
+</div>
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Pressure</span>
+<span class="text-primary font-bold">2500 Bar</span>
+</div>
+<div class="bg-surface-container-lowest p-2 col-span-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Compatibility</span>
+<span class="text-primary truncate block">Diesel Gen-III Platforms</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto border-t border-outline pt-stack-md">
+<span class="font-headline-md text-headline-md text-primary">$189.50</span>
+<button class="bg-primary text-on-primary px-4 py-2 font-label-caps text-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2 border border-primary">
+<span class="material-symbols-outlined text-[18px]">add</span> Quote
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-[#8E9196] hover:border-secondary hover:border-2 transition-all group flex flex-col">
+<div class="h-48 relative border-b border-outline overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 mix-blend-multiply" data-alt="A clean, clinical studio shot of a complex automotive timing belt kit, including pulleys and tensioners. Laid out flat against a stark white background. Focus on the raw mechanical components, highlighting teeth patterns and metallic textures. Industrial, robust aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfIKUEad7dxGLQiDazB-bq8xHwr35ETIHQmK5nTlgWHGW0OsXz6bmDdvNn4nW5x8s0Eni2RQAd4WK2gD5zpGzmba7_lAWz7za9KMfrim8wcs1rpRsX9YsTMJvmXPdefg7tNxfEOt1MfIXZNDiHtHE9xNQF7xuPcZqE6hKGtQbd4uhwWqLVuNY15E-_Ymss4FmRK2GrWBwxUegaJOa_MZy6QO5PVflJ13gpQrfmv0zILLN_86a_1cGA"/>
+<div class="absolute top-2 left-2 bg-surface-lowest border border-outline px-2 py-1 font-label-caps text-label-caps text-primary uppercase flex items-center gap-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> In Stock
+                        </div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col">
+<h3 class="font-headline-md text-headline-md text-primary leading-tight mb-1 uppercase tracking-tight">Timing Belt Kit Pro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Complete overhaul kit with heavy-duty tensioners.</p>
+<div class="mt-auto grid grid-cols-2 gap-px bg-outline border border-outline tech-font text-label-technical mb-stack-lg">
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">SKU</span>
+<span class="text-primary font-bold">TBK-990-HD</span>
+</div>
+<div class="bg-surface-container-lowest p-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Teeth</span>
+<span class="text-primary font-bold">148T</span>
+</div>
+<div class="bg-surface-container-lowest p-2 col-span-2">
+<span class="block text-on-surface-variant text-[10px] uppercase">Compatibility</span>
+<span class="text-primary truncate block">Universal Inline-4 2.0L-2.4L</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto border-t border-outline pt-stack-md">
+<span class="font-headline-md text-headline-md text-primary">$215.00</span>
+<button class="bg-secondary text-on-secondary px-4 py-2 font-label-caps text-label-caps uppercase hover:bg-secondary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span> Quote
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-stack-lg flex justify-center items-center gap-2 font-label-caps text-label-caps">
+<button class="p-2 border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-colors bg-surface-container-lowest disabled:opacity-50"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="w-8 h-8 flex items-center justify-center bg-primary text-on-primary">1</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline text-on-surface hover:border-primary transition-colors bg-surface-container-lowest">2</button>
+<button class="w-8 h-8 flex items-center justify-center border border-outline text-on-surface hover:border-primary transition-colors bg-surface-container-lowest">3</button>
+<span class="text-on-surface-variant mx-2">...</span>
+<button class="p-2 border border-outline text-on-surface hover:border-primary hover:text-primary transition-colors bg-surface-container-lowest"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container font-label-technical text-label-technical w-full py-stack-lg border-t-2 border-outline dark:border-outline-variant flat no shadows grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto shrink-0 mt-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-stack-sm">
+<span class="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">Bab Al Sajaah</span>
+<p class="text-on-primary-fixed-variant font-body-md text-body-md mt-2">© 2024 Bab Al Sajaah Industrial. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-stack-lg md:justify-end items-center">
+<a class="text-on-primary font-bold hover:text-secondary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Terms of Service</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Shipping Info</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Returns</a>
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Technical Support</a>
+</div>
+</footer>
+</body></html>

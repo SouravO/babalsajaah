@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Bab Al Sajaah</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1a1c1e",
+                        "on-primary-container": "#838486",
+                        "on-tertiary-fixed": "#181c20",
+                        "primary": "#000101",
+                        "background": "#f9f9fa",
+                        "secondary-fixed": "#ffdad6",
+                        "inverse-surface": "#2f3132",
+                        "on-secondary-fixed": "#410003",
+                        "tertiary": "#000001",
+                        "on-primary-fixed-variant": "#454749",
+                        "tertiary-container": "#191c20",
+                        "surface-container": "#eeeeef",
+                        "on-secondary-container": "#fffbff",
+                        "secondary": "#bb0016",
+                        "surface-container-high": "#e8e8e9",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9fa",
+                        "on-surface-variant": "#44474a",
+                        "surface-variant": "#e2e2e3",
+                        "surface": "#f9f9fa",
+                        "surface-dim": "#dadadb",
+                        "surface-container-highest": "#e2e2e3",
+                        "outline-variant": "#c5c6ca",
+                        "secondary-container": "#e32228",
+                        "tertiary-fixed-dim": "#c4c6cc",
+                        "error": "#ba1a1a",
+                        "on-background": "#1a1c1d",
+                        "on-primary-fixed": "#1a1c1e",
+                        "tertiary-fixed": "#e0e2e8",
+                        "on-tertiary-container": "#818489",
+                        "on-tertiary-fixed-variant": "#44474b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c6c6c9",
+                        "inverse-on-surface": "#f1f1f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#93000e",
+                        "on-surface": "#1a1c1d",
+                        "primary-fixed": "#e2e2e5",
+                        "secondary-fixed-dim": "#ffb4ac",
+                        "outline": "#75777a",
+                        "surface-tint": "#5d5e61"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "stack-md": "12px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-technical": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-technical": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="w-full h-20 border-b border-outline bg-primary flex justify-between items-center px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">Bab Al Sajaah</div>
+<nav class="hidden md:flex gap-gutter items-center h-full">
+<a class="text-on-primary font-body-md text-body-md hover:text-secondary transition-colors h-full flex items-center" href="#">Catalog</a>
+<a class="text-on-primary font-body-md text-body-md hover:text-secondary transition-colors h-full flex items-center" href="#">Brands</a>
+<a class="text-on-primary font-body-md text-body-md hover:text-secondary transition-colors h-full flex items-center" href="#">About Us</a>
+<a class="text-secondary font-bold font-body-md text-body-md border-b-2 border-secondary h-full flex items-center" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="text-on-primary hover:text-secondary transition-colors scale-95 duration-75">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-on-primary hover:text-secondary transition-colors scale-95 duration-75">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="bg-secondary text-on-secondary px-4 py-2 border border-secondary hover:bg-secondary-container transition-colors font-label-caps text-label-caps uppercase scale-95 duration-75">Add to Quote</button>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col gap-stack-lg">
+<div class="text-center py-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase tracking-tighter mb-stack-sm">Technical Support &amp; Inquiries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our precision spare parts experts are ready to assist you. Contact us for technical specifications, bulk quotes, or compatibility inquiries.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-surface-container border border-outline p-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-tighter mb-stack-lg border-b border-outline pb-stack-sm">Submit an Inquiry</h2>
+<form class="flex flex-col gap-stack-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base" for="first-name">First Name</label>
+<input class="bg-surface border border-primary focus:border-secondary focus:ring-1 focus:ring-secondary p-2 font-label-technical text-label-technical text-on-surface outline-none transition-colors" id="first-name" placeholder="ENTER FIRST NAME" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base" for="last-name">Last Name</label>
+<input class="bg-surface border border-primary focus:border-secondary focus:ring-1 focus:ring-secondary p-2 font-label-technical text-label-technical text-on-surface outline-none transition-colors" id="last-name" placeholder="ENTER LAST NAME" type="text"/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base" for="email">Corporate Email</label>
+<input class="bg-surface border border-primary focus:border-secondary focus:ring-1 focus:ring-secondary p-2 font-label-technical text-label-technical text-on-surface outline-none transition-colors" id="email" placeholder="email@company.com" type="email"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base" for="inquiry-type">Inquiry Type</label>
+<select class="bg-surface border border-primary focus:border-secondary focus:ring-1 focus:ring-secondary p-2 font-label-technical text-label-technical text-on-surface outline-none transition-colors appearance-none rounded-none" id="inquiry-type">
+<option>Technical Specifications</option>
+<option>Bulk Order Quote</option>
+<option>Order Status</option>
+<option>Compatibility Check</option>
+</select>
+</div>
+<div class="flex flex-col flex-grow">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-base" for="message">Message Details</label>
+<textarea class="bg-surface border border-primary focus:border-secondary focus:ring-1 focus:ring-secondary p-2 font-label-technical text-label-technical text-on-surface outline-none transition-colors resize-none" id="message" placeholder="Provide part numbers (SKU) if applicable..." rows="5"></textarea>
+</div>
+<button class="mt-stack-sm bg-primary text-on-primary border border-primary hover:bg-inverse-surface transition-colors font-label-caps text-label-caps uppercase py-3 px-6 flex justify-center items-center gap-2 w-full md:w-auto self-start" type="submit">
+                        Submit Request
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Contact Info & Map -->
+<div class="lg:col-span-5 flex flex-col gap-stack-lg">
+<div class="bg-primary text-on-primary border border-primary p-stack-lg flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md uppercase tracking-tighter border-b border-outline-variant pb-stack-sm">Direct Contact</h3>
+<div class="flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-primary-container uppercase mb-1">Phone Line</div>
+<div class="font-label-technical text-label-technical">+971 6 536 1234</div>
+</div>
+</div>
+<div class="flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-secondary" data-icon="forum">forum</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-primary-container uppercase mb-1">WhatsApp Fast Track</div>
+<div class="font-label-technical text-label-technical">+971 50 123 4567</div>
+<a class="text-secondary hover:text-secondary-fixed-dim font-label-caps text-label-caps uppercase underline mt-2 inline-block" href="#">Message Us Now</a>
+</div>
+</div>
+<div class="flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-primary-container uppercase mb-1">General Inquiries</div>
+<div class="font-label-technical text-label-technical">sales@babalsajaah.com</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container border border-outline p-stack-lg flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md text-primary uppercase tracking-tighter border-b border-outline pb-stack-sm">Headquarters</h3>
+<div class="flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Location</div>
+<div class="font-label-technical text-label-technical text-on-surface">Warehouse 12, Sajaah Industrial Area<br/>Sharjah, United Arab Emirates</div>
+</div>
+</div>
+<div class="flex items-start gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Operating Hours</div>
+<div class="font-label-technical text-label-technical text-on-surface">Mon - Sat: 08:00 - 18:00 (GST)<br/>Sunday: Closed</div>
+</div>
+</div>
+<div class="mt-stack-sm h-48 border border-outline relative overflow-hidden bg-surface-variant group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed overhead map view of an industrial park in Sharjah, UAE, featuring large warehouse structures and precise road grids. The map is rendered in a stark, modern industrial aesthetic with a controlled palette of concrete greys, metallic silvers, and deep charcoal, accented with sharp automotive red markers. The style is utilitarian, architectural, and strictly functional." data-location="Sharjah, Sajaah Industrial Area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG-iEnIy_p6cGUnNMxfn7aB4QZbiYhsZRz2DNW2prrb24jw1xxqMMyonoYp9LvN1UVg7v2dn6DpHp0PQbVVoVfbgrxHdhRopOa9cPr78IqSoZKPQD7LDcKZi8icvrSrGX4BNoDrkB0Mp0Znx0O-tOy25b5uZPae--pM7FlkHRw1jVNog5b14YiedG4JVF5ZyfQOh4lQCvM3Quu7kDXwc6f3GJMn4PmvYpO0qRY62KjXI71n4b3ZAM1"/>
+<div class="absolute inset-0 border border-primary pointer-events-none"></div>
+<div class="absolute bottom-2 right-2 bg-primary text-on-primary px-2 py-1 font-label-caps text-label-caps uppercase border border-outline">Map View</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-primary border-t-2 border-outline mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-md col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">Bab Al Sajaah</div>
+<div class="font-label-technical text-label-technical text-on-primary-container">Precision Spare Parts</div>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-gutter justify-start md:justify-end items-center">
+<a class="font-label-technical text-label-technical text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+<a class="font-label-technical text-label-technical text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Terms of Service</a>
+<a class="font-label-technical text-label-technical text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Shipping Info</a>
+<a class="font-label-technical text-label-technical text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Returns</a>
+<a class="font-label-technical text-label-technical text-on-primary-fixed-variant hover:text-secondary-fixed-dim underline transition-all" href="#">Technical Support</a>
+</div>
+<div class="col-span-1 md:col-span-4 font-label-technical text-label-technical text-on-primary-fixed-variant mt-stack-md pt-stack-md border-t border-outline-variant text-center md:text-left">
+                © 2024 Bab Al Sajaah Industrial. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
