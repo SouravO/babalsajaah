@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -54,17 +56,11 @@ export default function Home() {
                   </select>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
-                <div className="flex flex-col">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Year</label>
-                  <select className="bg-surface-container border border-outline p-2 font-body-md text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none rounded-none" disabled>
-                    <option>Select Year</option>
-                  </select>
-                </div>
-                <div className="flex flex-col">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Part Number (Optional)</label>
-                  <input className="bg-surface-container border border-outline p-2 font-label-technical text-label-technical focus:border-secondary focus:ring-1 focus:ring-secondary outline-none rounded-none" placeholder="e.g. OEM-12345" type="text"/>
-                </div>
+              <div className="flex flex-col">
+                <label className="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase">Year</label>
+                <select className="bg-surface-container border border-outline p-2 font-body-md text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none rounded-none" disabled>
+                  <option>Select Year</option>
+                </select>
               </div>
               <button className="mt-4 bg-primary text-on-primary w-full py-3 font-label-caps text-label-caps uppercase tracking-widest border border-primary hover:bg-inverse-surface transition-colors flex justify-center items-center gap-2" type="button">
                 Search Inventory
@@ -117,9 +113,9 @@ export default function Home() {
         <div className="max-w-container-max mx-auto">
           <div className="flex justify-between items-end mb-stack-lg border-b border-primary pb-stack-sm">
             <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">Featured Components</h2>
-            <a href="/catalog" className="text-secondary hover:text-secondary-fixed-dim font-label-caps uppercase flex items-center gap-1">
+            <Link href="/catalog" className="text-secondary hover:text-secondary-fixed-dim font-label-caps uppercase flex items-center gap-1">
               View Catalog <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {/* Reusing Product Card style from Catalog */}
@@ -131,7 +127,7 @@ export default function Home() {
                 <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Forged Piston Kit</h3>
                 <p className="font-body-md text-on-surface-variant mb-stack-md">High-compression assembly.</p>
                 <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                  <a href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</a>
+                  <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                 </div>
               </div>
             </div>
@@ -144,7 +140,7 @@ export default function Home() {
                 <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Ceramic Brake Pads</h3>
                 <p className="font-body-md text-on-surface-variant mb-stack-md">Premium stopping power.</p>
                 <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                  <a href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</a>
+                  <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                 </div>
               </div>
             </div>
@@ -157,7 +153,7 @@ export default function Home() {
                 <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Timing Belt Kit Pro</h3>
                 <p className="font-body-md text-on-surface-variant mb-stack-md">Complete overhaul kit.</p>
                 <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                  <a href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</a>
+                  <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                 </div>
               </div>
             </div>

@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function ProductDetails() {
   return (
     <div className="flex-1 p-margin-mobile md:p-margin-desktop md:ml-64 w-full">
       {/* Breadcrumb */}
       <div className="mb-stack-lg text-on-surface-variant font-label-technical text-label-technical flex items-center gap-stack-sm">
-        <a className="hover:text-secondary" href="/catalog">Catalog</a>
+        <Link className="hover:text-secondary" href="/catalog">Catalog</Link>
         <span className="material-symbols-outlined text-sm">chevron_right</span>
         <a className="hover:text-secondary" href="#">Braking System</a>
         <span className="material-symbols-outlined text-sm">chevron_right</span>

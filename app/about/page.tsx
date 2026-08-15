@@ -11,7 +11,7 @@ export default function About() {
           <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">Our Legacy</h2>
           <div className="w-16 h-1 bg-secondary"></div>
           <p className="font-body-lg text-body-lg text-on-surface">
-            Founded in the heart of Sharjah's industrial sector, Bab Al Sajaah Spare Parts has grown from a specialized local vendor to a premier distributor of heavy-duty automotive and industrial components across the Middle East.
+            Founded in the heart of Sharjah&apos;s industrial sector, Bab Al Sajaah Spare Parts has grown from a specialized local vendor to a premier distributor of heavy-duty automotive and industrial components across the Middle East.
           </p>
           <p className="font-body-md text-on-surface-variant">
             We understand that in heavy industry and commercial transport, downtime is not an option. That is why we source only the most resilient, precisely engineered OEM and high-performance aftermarket parts available globally.
