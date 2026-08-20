@@ -2,6 +2,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { CONDITION_LABELS, STOCK_LABELS, type Part } from "@/lib/types";
 import Link from "next/link";
 import CatalogFilters from "./CatalogFilters";
+import ViewToggler from "./ViewToggler";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +39,9 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
     return true;
   });
 
+  const viewParam = searchParams.view;
+  const view = viewParam === 'list' ? 'list' : 'grid';
+
   const count = parts.length;
 
   return (
@@ -61,14 +65,7 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
               Displaying {count} {count === 1 ? "Part" : "Parts"}
             </p>
           </div>
-          <div className="flex gap-2 text-on-surface-variant">
-            <button className="p-2 border border-outline hover:border-primary hover:text-primary transition-colors bg-surface-lowest">
-              <span className="material-symbols-outlined">grid_view</span>
-            </button>
-            <button className="p-2 border border-outline hover:border-primary hover:text-primary transition-colors bg-surface-container">
-              <span className="material-symbols-outlined">view_list</span>
-            </button>
-          </div>
+          <ViewToggler currentView={view} />
         </div>
 
         {parts.length === 0 ? (
@@ -78,17 +75,17 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <div className={`grid gap-gutter ${view === 'list' ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
             {parts.map((part) => {
               const primaryCompat = part.compatibility?.[0];
               return (
                 <div
                   key={part.id}
-                  className="bg-surface-container-lowest border border-[#8E9196] hover:border-secondary hover:border-2 transition-all group flex flex-col"
+                  className={`bg-surface-container-lowest border border-[#8E9196] hover:border-secondary hover:border-2 transition-all group flex ${view === 'list' ? 'flex-col md:flex-row' : 'flex-col'}`}
                 >
                   <a
                     href={`/catalog/${part.id}`}
-                    className="h-48 relative border-b border-outline overflow-hidden bg-surface-container block"
+                    className={`relative border-outline overflow-hidden bg-surface-container block shrink-0 ${view === 'list' ? 'h-48 md:h-auto md:w-1/3 border-b md:border-b-0 md:border-r' : 'h-48 border-b'}`}
                   >
                     {part.photos?.[0] ? (
                       <img

@@ -76,27 +76,7 @@ export default function CatalogFilters({
           </span>
           <span className="uppercase tracking-widest">Catalog</span>
         </Link>
-        <a
-          className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200"
-          href="#"
-        >
-          <span className="material-symbols-outlined">directions_car</span>
-          <span className="uppercase tracking-widest">Compatibility</span>
-        </a>
-        <a
-          className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200"
-          href="#"
-        >
-          <span className="material-symbols-outlined">description</span>
-          <span className="uppercase tracking-widest">My Quotes</span>
-        </a>
-        <a
-          className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-200"
-          href="/contact"
-        >
-          <span className="material-symbols-outlined">support_agent</span>
-          <span className="uppercase tracking-widest">Support</span>
-        </a>
+      
       </nav>
       <div className="px-gutter mt-auto pt-stack-lg border-t border-outline">
         <div className="flex justify-between items-center mb-stack-md">
