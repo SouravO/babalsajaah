@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full py-stack-lg bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container border-t-2 border-outline dark:border-outline-variant mt-auto">
+    <footer className="w-full py-stack-lg bg-primary text-on-primary border-t-2 border-outline mt-auto">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
         <div className="flex flex-col gap-4">
           <div className="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">Bab Al Sajaah</div>

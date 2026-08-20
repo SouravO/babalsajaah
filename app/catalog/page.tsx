@@ -1,133 +1,57 @@
 import { supabaseServer } from "@/lib/supabase/server";
 import { CONDITION_LABELS, STOCK_LABELS, type Part } from "@/lib/types";
 import Link from "next/link";
+import CatalogFilters from "./CatalogFilters";
 
 export const dynamic = "force-dynamic";
 
-export default async function Catalog() {
+export default async function Catalog(props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const searchParams = await props.searchParams;
+  
   const { data } = await supabaseServer()
     .from("parts")
     .select("*")
     .order("created_at", { ascending: false });
 
-  const parts = (data ?? []) as Part[];
+  const allParts = (data ?? []) as Part[];
+  
+  const categories = Array.from(new Set(allParts.map((p) => p.category).filter((c): c is string => Boolean(c))));
+  const brands = Array.from(new Set(allParts.map((p) => p.brand).filter((b): b is string => Boolean(b))));
+  const conditions = Array.from(new Set(allParts.map((p) => p.condition).filter(Boolean)));
+  const stockStatuses = Array.from(new Set(allParts.map((p) => p.stock_status).filter(Boolean)));
+
+  const getArray = (val: string | string[] | undefined) => {
+    if (!val) return [];
+    return Array.isArray(val) ? val : [val];
+  };
+
+  const selectedCategories = getArray(searchParams.category);
+  const selectedBrands = getArray(searchParams.brand);
+  const selectedConditions = getArray(searchParams.condition);
+  const selectedStock = getArray(searchParams.stock);
+
+  const parts = allParts.filter(part => {
+    if (selectedCategories.length > 0 && (!part.category || !selectedCategories.includes(part.category))) return false;
+    if (selectedBrands.length > 0 && (!part.brand || !selectedBrands.includes(part.brand))) return false;
+    if (selectedConditions.length > 0 && (!part.condition || !selectedConditions.includes(part.condition))) return false;
+    if (selectedStock.length > 0 && (!part.stock_status || !selectedStock.includes(part.stock_status))) return false;
+    return true;
+  });
+
   const count = parts.length;
 
   return (
-    <div className="flex-grow flex w-full max-w-container-max mx-auto">
+    <div className="flex-grow flex w-full">
       {/* SideNavBar */}
-      <aside className="hidden md:flex flex-col h-[calc(100vh-80px)] w-64 sticky top-20 bg-surface-container dark:bg-primary-container text-on-surface dark:text-on-primary-container font-label-caps text-label-caps border-r border-outline dark:border-outline-variant flat no shadows py-stack-lg shrink-0 overflow-y-auto">
-        <div className="px-gutter mb-stack-lg">
-          <div className="font-headline-lg text-headline-lg text-primary dark:text-on-primary-container mb-1 tracking-tighter">
-            Bab Al Sajaah
-          </div>
-          <div className="text-on-surface-variant dark:text-on-tertiary-container tech-font text-label-technical">
-            Precision Spare Parts
-          </div>
-        </div>
-        <nav className="flex flex-col gap-1 w-full flex-grow">
-          <Link
-            className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200"
-            href="/"
-          >
-            <span className="material-symbols-outlined">home</span>
-            <span className="uppercase tracking-widest">Home</span>
-          </Link>
-          <Link
-            className="flex items-center gap-3 px-gutter py-3 bg-secondary dark:bg-secondary-container text-on-secondary dark:text-on-secondary-container rounded-none border-l-4 border-primary transition-all duration-200"
-            href="/catalog"
-          >
-            <span className="material-symbols-outlined icon-fill">
-              settings_input_component
-            </span>
-            <span className="uppercase tracking-widest">Catalog</span>
-          </Link>
-          <a
-            className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">directions_car</span>
-            <span className="uppercase tracking-widest">Compatibility</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">description</span>
-            <span className="uppercase tracking-widest">My Quotes</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-gutter py-3 text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all duration-200"
-            href="/contact"
-          >
-            <span className="material-symbols-outlined">support_agent</span>
-            <span className="uppercase tracking-widest">Support</span>
-          </a>
-        </nav>
-        <div className="px-gutter mt-auto pt-stack-lg border-t border-outline">
-          <h3 className="font-label-caps text-label-caps uppercase text-on-surface-variant mb-stack-md tracking-widest">
-            Filters
-          </h3>
-          <div className="space-y-stack-md mb-stack-lg">
-            <details className="group" open>
-              <summary className="flex justify-between items-center cursor-pointer font-body-md text-body-md font-bold text-primary mb-2">
-                Category
-                <span className="material-symbols-outlined group-open:-rotate-180 transition-transform">
-                  expand_more
-                </span>
-              </summary>
-              <div className="flex flex-col gap-2 pl-2 tech-font text-label-technical">
-                {Array.from(
-                  new Set(parts.map((p) => p.category).filter(Boolean))
-                ).map((category) => (
-                  <label
-                    key={category}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      defaultChecked
-                      className="text-secondary border-outline focus:ring-secondary rounded-none bg-surface"
-                      type="checkbox"
-                    />
-                    {category}
-                  </label>
-                ))}
-              </div>
-            </details>
-            <details className="group" open>
-              <summary className="flex justify-between items-center cursor-pointer font-body-md text-body-md font-bold text-primary mb-2">
-                Brand
-                <span className="material-symbols-outlined group-open:-rotate-180 transition-transform">
-                  expand_more
-                </span>
-              </summary>
-              <div className="flex flex-col gap-2 pl-2 tech-font text-label-technical">
-                {Array.from(
-                  new Set(parts.map((p) => p.brand).filter(Boolean))
-                ).map((brand) => (
-                  <label
-                    key={brand}
-                    className="flex items-center gap-2 cursor-pointer"
-                  >
-                    <input
-                      className="text-secondary border-outline focus:ring-secondary rounded-none bg-surface"
-                      type="checkbox"
-                    />
-                    {brand}
-                  </label>
-                ))}
-              </div>
-            </details>
-          </div>
-          <button className="w-full bg-primary text-on-primary py-3 font-label-caps text-label-caps uppercase hover:bg-tertiary transition-colors border border-primary flex items-center justify-center gap-2">
-            <span className="material-symbols-outlined">search</span>
-            Part Search
-          </button>
-        </div>
-      </aside>
+      <CatalogFilters 
+        categories={categories}
+        brands={brands}
+        conditions={conditions}
+        stockStatuses={stockStatuses}
+      />
 
       {/* Main Content Canvas */}
-      <main className="flex-grow p-gutter md:p-margin-desktop bg-surface-bright">
+      <div className="flex-grow p-gutter md:p-margin-desktop bg-surface-bright">
         <div className="flex justify-between items-end mb-stack-lg border-b-2 border-primary pb-stack-sm">
           <div>
             <h1 className="font-headline-xl text-headline-xl text-primary tracking-tighter uppercase">
@@ -213,7 +137,23 @@ export default async function Catalog() {
                           {CONDITION_LABELS[part.condition] ?? part.condition}
                         </span>
                       </div>
-                      <div className="bg-surface-container-lowest p-2 col-span-2">
+                      <div className="bg-surface-container-lowest p-2">
+                        <span className="block text-on-surface-variant text-[10px] uppercase">
+                          Brand
+                        </span>
+                        <span className="text-primary font-bold truncate block">
+                          {part.brand || "N/A"}
+                        </span>
+                      </div>
+                      <div className="bg-surface-container-lowest p-2">
+                        <span className="block text-on-surface-variant text-[10px] uppercase">
+                          Part #
+                        </span>
+                        <span className="text-primary font-bold truncate block">
+                          {part.part_number || "N/A"}
+                        </span>
+                      </div>
+                      <div className="bg-surface-container-lowest p-2">
                         <span className="block text-on-surface-variant text-[10px] uppercase">
                           Compatibility
                         </span>
@@ -226,7 +166,7 @@ export default async function Catalog() {
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center justify-between mt-auto border-t border-outline pt-stack-md">
+                    <div className="flex items-center justify-between mt-auto border-t border-outline pt-stack-md gap-2">
                       <span className="font-headline-md text-headline-md text-primary">
                         {part.price != null
                           ? `AED ${Number(part.price).toLocaleString("en-US", {
@@ -234,13 +174,23 @@ export default async function Catalog() {
                             })}`
                           : "POA"}
                       </span>
-                      <a
-                        href={`/catalog/${part.id}`}
-                        className="bg-secondary text-on-secondary px-4 py-2 font-label-caps text-label-caps uppercase hover:bg-secondary-container transition-colors flex items-center gap-2"
-                      >
-                        <span className="material-symbols-outlined text-[18px]">add</span>
-                        Details
-                      </a>
+                      <div className="flex gap-2">
+                        <a 
+                          href={`https://wa.me/971501234567?text=${encodeURIComponent(`Hi, I'm interested in ${part.name} (Part #: ${part.part_number || 'N/A'}). Can you provide more details?`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-[#25D366] text-white px-3 py-2 font-label-caps text-label-caps uppercase hover:bg-green-600 transition-colors flex items-center gap-1"
+                        >
+                          <span className="material-symbols-outlined text-[18px]">chat</span>
+                          <span className="hidden xl:inline">WhatsApp</span>
+                        </a>
+                        <a
+                          href={`/catalog/${part.id}`}
+                          className="border border-primary text-primary px-3 py-2 font-label-caps text-label-caps uppercase hover:bg-surface-container transition-colors flex items-center gap-1"
+                        >
+                          Details
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -248,7 +198,7 @@ export default async function Catalog() {
             })}
           </div>
         )}
-      </main>
+      </div>
     </div>
   );
 }
