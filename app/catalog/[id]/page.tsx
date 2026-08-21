@@ -80,9 +80,9 @@ export default function ProductDetails() {
                   <input className="w-full bg-surface-container-lowest border border-primary p-stack-sm font-label-technical text-label-technical text-primary focus:border-secondary focus:ring-0 shadow-inner" type="date" />
                 </div>
               </div>
-              <button className="w-full bg-secondary text-on-secondary py-stack-md font-label-caps text-label-caps border border-secondary hover:bg-secondary-container transition-colors flex items-center justify-center gap-stack-sm mt-stack-sm" type="button">
-                <span className="material-symbols-outlined">add_shopping_cart</span> Add to Quote
-              </button>
+              <a href="https://wa.me/971564997292?text=Hi,%20I'm%20interested%20in%20the%20Pro-Stop%20Ceramic%20Brake%20Pads%20(SKU:%20BRK-CER-992-A).%20Can%20you%20please%20share%20the%20price?" target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-stack-md font-label-caps text-label-caps hover:bg-green-600 transition-colors flex items-center justify-center gap-stack-sm mt-stack-sm">
+                <span className="material-symbols-outlined">chat</span> Inquire on WhatsApp for Price
+              </a>
             </form>
           </div>
         </div>
