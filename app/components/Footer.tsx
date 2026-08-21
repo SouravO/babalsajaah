@@ -5,7 +5,12 @@ export default function Footer() {
     <footer className="w-full py-stack-lg bg-primary text-on-primary border-t-2 border-outline mt-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
         <div className="flex flex-col gap-4 lg:col-span-5">
-          <div className="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">BAB AL SAJAAH AUTO SPARE PARTS TR. L.L.C</div>
+          <div className="flex flex-col gap-1">
+            <span className="font-headline-sm text-lg text-secondary-fixed-dim" dir="rtl" lang="ar" style={{ fontFamily: 'Tahoma, Arial, sans-serif' }}>
+              باب الصجعة
+            </span>
+            <div className="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter">BAB AL SAJAAH AUTO SPARE PARTS TR. L.L.C</div>
+          </div>
           <div className="font-label-technical text-label-technical text-on-primary-fixed-variant">
             Precision spare parts for industrial and automotive applications.
           </div>
