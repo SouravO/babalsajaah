@@ -1,6 +1,12 @@
 import LoginForm from "../login-form";
 
-export default function AdminLoginPage() {
+export default async function AdminLoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ next?: string }>;
+}) {
+  const { next } = await searchParams;
+
   return (
     <div className="flex-grow flex items-center justify-center px-margin-mobile md:px-margin-desktop py-stack-lg">
       <div className="w-full max-w-md">
@@ -16,7 +22,7 @@ export default function AdminLoginPage() {
               Restricted access. Authorized personnel only.
             </p>
           </div>
-          <LoginForm />
+          <LoginForm next={next} />
         </div>
       </div>
     </div>

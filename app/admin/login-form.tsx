@@ -1,50 +1,40 @@
 "use client";
 
 import { useActionState } from "react";
-import { login } from "./actions";
+import { login } from "./actions/auth";
+import { Field, inputClass } from "./components/fields";
 
-export default function LoginForm() {
+export default function LoginForm({ next }: { next?: string }) {
   const [state, action, pending] = useActionState(login, undefined);
 
   return (
     <form action={action} className="flex flex-col gap-stack-md">
+      {next && <input type="hidden" name="next" value={next} />}
       {state?.error && (
         <div className="bg-error-container text-on-error-container border border-error px-3 py-2 font-label-technical text-label-technical">
           {state.error}
         </div>
       )}
-      <div className="flex flex-col">
-        <label
-          htmlFor="email"
-          className="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase"
-        >
-          Email
-        </label>
+      <Field label="Email" htmlFor="email" required>
         <input
           id="email"
           name="email"
           type="email"
           required
           autoComplete="email"
-          className="bg-surface-container border border-outline p-2 font-body-md text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none rounded-none"
+          className={inputClass}
         />
-      </div>
-      <div className="flex flex-col">
-        <label
-          htmlFor="password"
-          className="font-label-caps text-label-caps text-on-surface-variant mb-1 uppercase"
-        >
-          Password
-        </label>
+      </Field>
+      <Field label="Password" htmlFor="password" required>
         <input
           id="password"
           name="password"
           type="password"
           required
           autoComplete="current-password"
-          className="bg-surface-container border border-outline p-2 font-body-md text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none rounded-none"
+          className={inputClass}
         />
-      </div>
+      </Field>
       <button
         type="submit"
         disabled={pending}
