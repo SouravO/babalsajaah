@@ -46,7 +46,6 @@ export default async function AdminInventoryPage() {
                 <th className="p-stack-sm whitespace-nowrap">Photo</th>
                 <th className="p-stack-sm whitespace-nowrap">Name</th>
                 <th className="p-stack-sm whitespace-nowrap">Condition</th>
-                <th className="p-stack-sm whitespace-nowrap">Price</th>
                 <th className="p-stack-sm whitespace-nowrap">Stock</th>
                 <th className="p-stack-sm text-right whitespace-nowrap">Actions</th>
               </tr>
@@ -79,9 +78,6 @@ export default async function AdminInventoryPage() {
                   </td>
                   <td className="p-stack-sm text-on-surface-variant uppercase text-xs">
                     {CONDITION_LABELS[part.condition]}
-                  </td>
-                  <td className="p-stack-sm font-bold text-primary">
-                    {part.price ? `AED ${part.price}` : "POA"}
                   </td>
                   <td className="p-stack-sm">
                     <StockStatusBadge status={part.stock_status} bordered />

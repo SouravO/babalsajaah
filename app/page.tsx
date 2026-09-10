@@ -40,9 +40,7 @@ export default function Home() {
           <Parallax offset={-30} zIndex={20}>
             <Reveal direction="right" delay={0.4}>
               <div className="bg-surface text-on-surface p-gutter border-2 border-primary shadow-[8px_8px_0px_0px_#bb0016] mt-8 lg:mt-0 relative">
-                <div className="absolute -top-4 -left-4 bg-primary text-on-primary px-3 py-1 font-label-caps text-label-caps border border-outline">
-                  SYS: PART_LOCATOR_V1
-                </div>
+              
                 <h2 className="font-headline-md text-headline-md mb-stack-lg uppercase border-b-2 border-primary pb-2 flex items-center gap-2">
                   <span className="material-symbols-outlined">manage_search</span>
                   Find Your Part
@@ -165,20 +163,20 @@ export default function Home() {
           <Reveal direction="up" delay={0.3} width="100%">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               <div className="md:col-span-2 h-64 md:h-96 relative border-2 border-outline bg-surface-container overflow-hidden group">
-                <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity brightness-110 hover:" src="/dubai-shop-banner.jpg" alt="Premium Shop Exterior" />
+                <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 hr brightness-110 hover:" src="/customer.png" alt="Premium Shop Exterior" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
                 <div className="absolute bottom-6 left-6 bg-primary text-on-primary px-4 py-2 font-label-caps uppercase text-sm border border-outline-variant shadow-lg backdrop-blur-sm">Flagship Storefront</div>
               </div>
               <div className="flex flex-col gap-gutter">
                 <div className="flex-1 min-h-[200px] relative border-2 border-outline bg-surface-container overflow-hidden group">
-                  <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" src="/shop-white.png" alt="Shop Exterior Light" style={{ objectPosition: 'center center' }} />
+                  <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" src="/dubai-shop-banner.jpg" alt="Shop Exterior Light" style={{ objectPosition: 'center center' }} />
                   <div className="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-sm text-on-surface px-3 py-1 font-label-caps uppercase text-sm border border-outline shadow-sm">Retail Center</div>
                 </div>
                
               </div>
             </div>
           </Reveal>
-        </div>
+        </div>  
       </section>
 
       {/* About Us Section */}

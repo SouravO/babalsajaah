@@ -67,7 +67,7 @@ export default function PartForm({
           />
         </Field>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
           <Field label="Item Condition" htmlFor="condition">
             <select
               id="condition"
@@ -81,18 +81,6 @@ export default function PartForm({
               <option value="genuine_oem">Genuine OEM</option>
               <option value="aftermarket">Aftermarket</option>
             </select>
-          </Field>
-          <Field label="Price (AED)" htmlFor="price">
-            <input
-              id="price"
-              name="price"
-              type="number"
-              step="0.01"
-              min="0"
-              defaultValue={initialData?.price ?? ""}
-              placeholder="0.00"
-              className={inputClass}
-            />
           </Field>
           <Field label="Stock Status" htmlFor="stock_status">
             <select

@@ -169,7 +169,7 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
                       </span>
                       <div className="flex gap-2">
                         <a 
-                          href={`https://wa.me/971564997292?text=${encodeURIComponent(`Hi, I'm interested in ${part.name} (Part #: ${part.part_number || 'N/A'}). Can you provide more details?`)}`}
+                          href={`https://wa.me/971564997292?text=${encodeURIComponent(`Hi, I'm interested in ${part.name}. Can you provide more details?`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="bg-[#25D366] text-white px-3 py-2 font-label-caps text-label-caps uppercase hover:bg-green-600 transition-colors flex items-center gap-1"

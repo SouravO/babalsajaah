@@ -53,16 +53,6 @@ export function parsePartForm(
     ? (stockRaw as StockStatus)
     : "in_stock";
 
-  const priceRaw = String(formData.get("price") ?? "").trim();
-  let price: number | null = null;
-
-  if (priceRaw) {
-    price = Number(priceRaw);
-    if (Number.isNaN(price) || price < 0) {
-      return { ok: false, error: "Price must be a positive number." };
-    }
-  }
-
   const category = String(formData.get("category") ?? "").trim();
   const brand = String(formData.get("brand") ?? "").trim();
   const description = String(formData.get("description") ?? "").trim();
@@ -96,7 +86,7 @@ export function parsePartForm(
     data: {
       name,
       condition,
-      price,
+      price: null,
       stock_status,
       category: category || null,
       brand: brand || null,
