@@ -30,12 +30,15 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
   const selectedBrands = getArray(searchParams.brand);
   const selectedConditions = getArray(searchParams.condition);
   const selectedStock = getArray(searchParams.stock);
+  const qParam = searchParams.q;
+  const query = (Array.isArray(qParam) ? qParam[0] : qParam)?.toLowerCase() || '';
 
   const parts = allParts.filter(part => {
     if (selectedCategories.length > 0 && (!part.category || !selectedCategories.includes(part.category))) return false;
     if (selectedBrands.length > 0 && (!part.brand || !selectedBrands.includes(part.brand))) return false;
     if (selectedConditions.length > 0 && (!part.condition || !selectedConditions.includes(part.condition))) return false;
     if (selectedStock.length > 0 && (!part.stock_status || !selectedStock.includes(part.stock_status))) return false;
+    if (query && !part.name?.toLowerCase().includes(query) && !part.description?.toLowerCase().includes(query) && !part.category?.toLowerCase().includes(query)) return false;
     return true;
   });
 
@@ -71,7 +74,7 @@ export default async function Catalog(props: { searchParams: Promise<{ [key: str
         {parts.length === 0 ? (
           <div className="border-2 border-dashed border-outline p-stack-lg text-center">
             <p className="font-body-md text-body-md text-on-surface-variant">
-              No parts in the catalog yet. Check back soon.
+              {query ? `No items found corresponding to "${query}".` : "No parts in the catalog yet. Check back soon."}
             </p>
           </div>
         ) : (

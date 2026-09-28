@@ -228,7 +228,7 @@ export default function Home() {
                   <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Forged Piston Kit</h3>
                   <p className="font-body-md text-on-surface-variant mb-stack-md">High-compression assembly.</p>
                   <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                    <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
+                    <Link href="/catalog?q=piston" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export default function Home() {
                   <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Ceramic Brake Pads</h3>
                   <p className="font-body-md text-on-surface-variant mb-stack-md">Premium stopping power.</p>
                   <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                    <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
+                    <Link href="/catalog?q=brake" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                   </div>
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function Home() {
                   <h3 className="font-headline-md text-headline-md text-primary uppercase tracking-tight mb-1">Timing Belt Kit Pro</h3>
                   <p className="font-body-md text-on-surface-variant mb-stack-md">Complete overhaul kit.</p>
                   <div className="mt-auto flex items-center justify-between border-t border-outline pt-stack-md">
-                    <Link href="/catalog/1" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
+                    <Link href="/catalog?q=timing+belt" className="bg-primary text-on-primary px-4 py-2 font-label-caps uppercase hover:bg-tertiary transition-colors flex items-center gap-2">View Details</Link>
                   </div>
                 </div>
               </div>

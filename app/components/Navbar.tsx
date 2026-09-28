@@ -1,16 +1,15 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
     <nav className="w-full h-20 bg-primary border-b border-outline sticky top-0 z-50">
       <div className="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto h-full">
-        <Link href="/" className="flex flex-col hover:opacity-80 transition-opacity">
-          <span className="font-body-md text-xs text-secondary-fixed-dim" dir="rtl" lang="ar" style={{ fontFamily: 'Tahoma, Arial, sans-serif' }}>
-            باب الصجعة
-          </span>
-          <span className="font-headline-md text-headline-md text-on-primary uppercase tracking-tighter leading-none mt-1">
-            Bab Al Sajaah
-          </span>
+        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <div className="relative w-22 h-22 flex-shrink-0">
+            <Image src="/logo.png" alt="Bab Al Sajaah Logo" width={250} height={250} className="object-contain" />
+          </div>
+         
         </Link>
         <div className="hidden md:flex gap-gutter items-center">
           <Link className="font-body-md text-body-md text-on-primary hover:text-secondary transition-colors scale-95 duration-75" href="/catalog">Catalog</Link>
